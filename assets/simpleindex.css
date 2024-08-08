@@ -1,0 +1,91 @@
+
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+}
+
+header { width: 900px; }
+
+
+span.tog {
+    font-size: 200%;
+    font-style: normal;
+}
+
+button {
+    font-family: Courier, monospace;
+    font-size: 200%;
+    background-color: white;
+    border: 1px solid white;
+}
+
+button:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+button:active { background-color: lightgray;}
+
+section { width: 900px; } 
+ 
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb(39, 39, 39);
+    font-family: Courier;
+    text-align: left;
+}
+
+
+section {
+    background: white;
+    /*border: 1.5px solid lightgray;*/
+    border-radius: 3px;
+}
+
+hr {
+    border: 0.5px solid lightgray;
+}
+
+header {
+    padding: 20px 0;
+    color: black;
+    line-height: 175%;
+}
+
+
+
+h1 {
+    font-size: 225%; 
+    font-variant: small-caps; 
+}
+
+
+
+h3 {
+    /* font-family: 'Arial Narrow Bold', sans-serif; */
+    font-size: 100%; 
+    line-height: 30%;
+    color: lightgray;
+}
+
+a { text-decoration: none; }
+
+a:link { color: rgb(51, 130, 208); } 
+
+a:visited { color: rgb(51, 130, 208); } 
+
+a:hover { color: rgb(204, 227, 249); } 
+
+a:active { color: lightgray; }
+
+ul.items {
+    list-style-type: square;
+    margin-left: 15px;
+    line-height: 225%;
+}
