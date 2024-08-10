@@ -132,30 +132,12 @@ footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 12/08/2024
 -->
 
 ## Roteiro de Aula
-- Preparação - configuração do VS Code
 - Bases de dados e tipos de variáveis
-- Primeiro gráfico: countplot
+- A sintaxe do countplot
+- Aula prática: vamos programar!
+  - Preparação: configuração do VS Code
+  - Nosso primeiro gráfico
 - Exercício
-
----
-
-## Config do Visual Studio Code
-
-<div class="columns">
-<div style="margin:auto">
-
-![w:400](config_vscode.png)
-
-</div>
-<div>
-<br><br>
-
-- **Guia de Configuração do VS CODE**
-  - Disponível no EClass
-  - Link de acesso: [bit.ly/config_vscode](bit.ly/config_vscode)
-
-</div>
-</div>
 
 ---
 
@@ -166,6 +148,7 @@ footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 12/08/2024
   * Dados tabulares (tabela)
   * Como organizar dados tabulares?
     * Conceito de **tidy data**
+
 
 ---
 
@@ -194,16 +177,230 @@ footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 12/08/2024
 
 ---
 
-### Agora vamos ao código!
+### O Ciclo da Ciência de Dados
 
 <br>
+<div style="margin: 0 auto">
 
-**IMPORTANDO AS BIBLIOTECAS NECESSÁRIAS**
+![w:800](ciclo.png)
 
-
+</div>
 
 ---
 
-## Dados de aula: pagamentos dos cartões presidenciais
+
+![bg](section_bg.png)
+
+<div style="text-align: center">
+
+# Vamos para o código
+
+</div>
+
+---
+
+### Bibliotecas para dados e visualizações
+
+<br>
+<div style="margin: 0 auto">
+
+![w:600](imports.png)
+
+</div>
+
+---
+
+### Carregar os dados da aula
+
+<br>
+<div style="margin: 0 auto">
+
+![w:800](pd_read_csv.png)
+
+</div>
+
+---
+
+### Dados de pagamentos dos cartões presidenciais
+
+<br>
+<div style="margin: 0 auto">
 
 ![](tabela_cartoes.png)
+
+</div>
+
+---
+
+## Dicionário dos dados
+
+- **data_pgto**: a data em que o pagamento foi realizado, no formato YYYY-MM-DD.
+- **ano**: O ano em que a transação foi realizada, como número inteiro.
+- **mes**: O mês em que a transação foi realizada, como número inteiro (1 = Janeiro, 2 = Fevereiro, etc).
+- **forma_pagamento**: A forma de pagamento utilizada, que pode ser `"Crédito"` ou `"Débito"`.
+- **valor**: O valor do pagamento realizado, em reais brasileiros (R$), como número decimal.
+
+---
+
+## Dicionário dos dados
+
+- **tipo_despesa**: A classificação orçamentária da despesa detalhada.
+- **nome_fornecedor**: A razão social ou nome do favorecido.
+- **cpf_servidor**: Os 6 últimos dígitos, antes do código verificador, do Cadastro de Pessoa Física (CPF) do agente suprido (que realizou o pagamento).
+- **mandato**: Identifica o mandato no qual aconteceu o pagamento.
+- **posicao_mandato**: Variável numérica que representa a ordem do mandato no qual aconteceu o pagamento.
+
+---
+
+### Vamos aprender a fazer o nosso primeiro gráfico
+
+---
+
+
+<div class="columns">
+<div>
+
+## Primeiro Gráfico
+
+- Contagem do uso das duas formas de pagamento: Crédito vs. Débito.
+* Usamos a função `sns.countplot()`
+  * `data=cartoes`: definimos qual DataFrame (dados) usar.
+  * `x="forma_pagamento"`: qual coluna/variável dos dados queremos plotar, em qual eixo.
+
+</div>
+<div>
+<br>
+
+![w:600](count_forma_pagamento.png)
+
+</div>
+</div>
+
+---
+
+### Como poderíamos inverter os eixos do gráfico?
+
+---
+
+<div class="columns">
+<div>
+
+## Eixo invertido
+
+- Invertemos os eixos definindo a função com a variável de contagem no eixo y.
+  - Para isso usamos o argumento `y="forma_pagamento"` na função `sns.countplot()`.
+  * Em que casos faz sentido fazer isso?
+
+</div>
+<div>
+<br>
+
+![w:600](count_forma_pagamento_invert.png)
+
+</div>
+</div>
+
+---
+
+<div class="columns">
+<div>
+
+## Problema dos nomes sobrepostos no eixo x
+
+- Um problema comum é termos a sobreposição dos nomes. Isso ocorre quando temos
+  - **Muitas categorias**.
+  - **Nomes longos** das categorias.
+- Veja ao lado o que ocorre quando tentamos plotar os mandatos no eixo x.
+
+</div>
+<div>
+<br>
+
+![w:600](count_mandatos_sobreposicao.png)
+
+</div>
+</div>
+
+---
+
+<div class="columns">
+<div>
+
+## Invertendo os eixos eliminamos a sobreposição
+
+- Uma forma simples de eliminar o problema das sobreposições é inverter os eixos.
+* Agora responda:
+  - **Em qual mandato houve o maior gasto no cartão presidencial?**
+
+
+</div>
+<div>
+<br>
+
+![w:600](count_mandatos.png)
+
+</div>
+</div>
+
+---
+
+<div class="columns">
+<div>
+
+## Cruzando duas variáveis
+
+- Podemos usar o argumento `hue` para cruzar duas variáveis.
+- Veja ao lado o número de transações de cada presidente por forma de pagamento.
+
+
+</div>
+<div>
+
+![w:600](count_mandatos_forma.png)
+
+</div>
+</div>
+
+---
+
+### Ainda podemos melhorar esse gráfico...
+
+<br>
+<div class="columns">
+<div>
+
+
+![w:500](code_count_avancado.png)
+
+</div>
+<div>
+
+
+![w:600](plot_count_avancado.png)
+
+</div>
+</div>
+
+---
+
+### Agora mãos à obra!
+
+---
+
+## Config do Visual Studio Code
+
+<div class="columns">
+<div style="margin:auto">
+
+![w:400](config_vscode.png)
+
+</div>
+<div>
+<br><br>
+
+- **Guia de Configuração do VS CODE**
+  - Disponível no EClass
+  - Link de acesso: [bit.ly/config_vscode](bit.ly/config_vscode)
+
+</div>
+</div>
