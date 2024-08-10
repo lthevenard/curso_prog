@@ -119,23 +119,80 @@ td.player1 {
 
 ![bg](section_bg.png)
 
-# Título da Aula 
+# Bases de dados e tipos de variáveis | Countplot
 **Programação para Advogados – 2024.2**
 José Luiz Nunes e Lucas Thevenard
 
 ---
+
 <!-- 
 paginate: true 
-header: Título da Aula
-footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | DD/MM/AAAA
+header: Aula 2 - Bases de dados e tipos de variáveis | Countplot
+footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 12/08/2024
 -->
 
-## Meu slide
-- item 1
-- item 2
+## Roteiro de Aula
+- Preparação - configuração do VS Code
+- Bases de dados e tipos de variáveis
+- Primeiro gráfico: countplot
+- Exercício
 
 ---
 
-## Meu slide 2
-- item 1
-- item 2
+## Config do Visual Studio Code
+
+<div class="columns">
+<div style="margin:auto">
+
+![w:400](config_vscode.png)
+
+</div>
+<div>
+<br><br>
+
+- **Guia de Configuração do VS CODE**
+  - Disponível no EClass
+  - Link de acesso: [bit.ly/config_vscode](bit.ly/config_vscode)
+
+</div>
+</div>
+
+---
+
+## Bases de dados e tipos de variáveis
+
+- O que é uma base de dados?
+  * Dados estruturados e não estruturados
+  * Dados tabulares (tabela)
+  * Como organizar dados tabulares?
+    * Conceito de **tidy data**
+
+---
+
+## Tidy Data
+
+- **Conceito**: alinhamento entre a estrutura dos dados e sua semântica (significado).
+- **Regra centrais**:
+  * Linhas são observações
+  * Colunas são variáveis
+  * Apenas uma unidade de observação (ou de análise) por tabela
+
+---
+
+## Tidy Data
+
+![](tidy_data.webp)
+
+---
+
+## Tidy Data
+
+- Vamos construir um exemplo com uma tabela de alunos da sala.
+  - **Unidade de observação**: Alunos
+  - **Variáveis**: Nome, Matrícula, Altura, Ano de Nascimento, Signo, Cor Favorita
+* Como construir uma tabela de jurisprudência no escritório?
+
+---
+
+## Nossos dados de aula
+
