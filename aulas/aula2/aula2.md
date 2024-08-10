@@ -194,5 +194,16 @@ footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 12/08/2024
 
 ---
 
-## Nossos dados de aula
+### Agora vamos ao código!
 
+<br>
+
+**IMPORTANDO AS BIBLIOTECAS NECESSÁRIAS**
+
+
+
+---
+
+## Dados de aula: pagamentos dos cartões presidenciais
+
+![](tabela_cartoes.png)
