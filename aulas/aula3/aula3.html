@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>aula3</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="aula3_files/libs/clipboard/clipboard.min.js"></script>
+<script src="aula3_files/libs/quarto-html/quarto.js"></script>
+<script src="aula3_files/libs/quarto-html/popper.min.js"></script>
+<script src="aula3_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="aula3_files/libs/quarto-html/anchor.min.js"></script>
+<link href="aula3_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="aula3_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="aula3_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="aula3_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="aula3_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  </head><body class="fullcontent">mathjax
+
+
+
+
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<style>
+section {
+  background-image: url(default_bg.png);
+}
+h1, h2, h3, strong {
+  color: #003E7E;
+}
+h3, h4, h5 {
+  text-align: center;
+}
+h4, h5 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 200%;
+}
+h2, h3 {
+  font-size: 150%;
+}
+h4 {
+  font-size: 100%;
+}
+h5 {
+  font-size: 75%;
+}
+header, a {
+  color: #058ED0;
+}
+header {
+  font-size: 85%;
+}
+footer {
+  color: black;
+  font-size: 60%;
+}
+blockquote {
+  background: #f9f9f9;
+  font-style: italic;
+  font-family: Verdana;
+  font-size: 80%;
+  line-height: 170%;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 20px;
+  padding: 1.2em 30px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote p {
+  display: inline;
+}
+section::after {
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+  color: #003E7E;
+  font-size: 60%;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+th {
+  background-color: #003E7E;
+  color: white
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.columns3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+span.under {
+  text-decoration: underline;
+}
+td.game, tr.game {
+  background-color: white;
+  text-align: center;
+}
+tr.game.action.player1, td.game.action.player1 {
+  background-color: #f8f8f8;
+  color: #058ED0;
+  font-weight: bold;
+}
+tr.game.action.player2, td.game.action.player2 {
+  background-color: #f8f8f8;
+  color: #003E7E;
+  font-weight: bold;
+}
+span.payoff.player1 {
+  color: #058ED0;
+  font-weight: bold;
+}
+span.payoff.player2 {
+  color: #003E7E;
+  font-weight: bold;
+}
+span.fade {
+  color: lightgray!important;
+}
+td.eliminated {
+  color: lightgray!important;
+  text-decoration: line-through!important;
+}
+td.eliminated > span {
+  color: lightgray!important;
+  text-decoration: line-through!important;
+}
+td.player1 {
+  height: 80px;
+  width: 80px;
+}
+</style>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="section_bg.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">bg</figcaption><p></p>
+</figure>
+</div>
+<section id="gráficos-de-barras---variáveis-categóricas-x-numéricas" class="level1">
+<h1>Gráficos de barras - Variáveis categóricas X numéricas</h1>
+<p><strong>Programação para Advogados – 2024.2</strong> José Luiz Nunes e Lucas Thevenard</p>
+<hr>
+<!-- 
+paginate: true 
+header: Aula 2 - Bases de dados e tipos de variáveis | Countplot
+footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 12/08/2024
+-->
+<section id="revisão" class="level2">
+<h2 class="anchored" data-anchor-id="revisão">Revisão</h2>
+<ul>
+<li>O que vimos até aqui?</li>
+<li>Que tipo de gráfico o countplot gera?</li>
+<li>Quais tipos de variáveis estavam sendo usadas?</li>
+</ul>
+<hr>
+</section>
+<div class="columns">
+<section id="revisão-1" class="level2">
+<h2 class="anchored" data-anchor-id="revisão-1">Revisão</h2>
+<ul>
+<li>Gráficos são “representações geométricas dos dados”</li>
+<li>Qual atributo dos dados esta sendo representado?</li>
+</ul>
+</section><div>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../aula2/count_forma_pagamento.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">w:600</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<!-- --- -->
+<!-- 
+<div class="columns">
+<div>
+
+## Revisão
+
+- Gráficos são "representações geométricas dos dados"
+- Qual atributo dos dados esta sendo representado?
+  - Eixo X - Categorias (barras diferentes)
+  - Eixo Y - Contagem (altura das barras)
+
+
+</div>
+<div>
+<br>
+
+![w:600](../aula2/count_forma_pagamento.png)
+
+</div>
+</div>
+
+---
+
+<div class="columns">
+<div>
+
+## Revisão
+
+- Gráficos são "representações geométricas dos dados"
+- Qual atributo dos dados esta sendo representado?
+  - Eixo X - Categorias (barras diferentes)
+  - Eixo Y - Contagem (altura das barras) - **aqui o seaborn criou uma variável numérica para nós!**
+
+
+</div>
+<div>
+<br>
+
+![w:600](../aula2/count_forma_pagamento.png)
+
+</div>
+</div>
+
+---
+
+<div class="columns">
+<div>
+
+## Revisão
+
+- Gráficos são "representações geométricas dos dados"
+- Qual atributo dos dados esta sendo representado?
+  - Eixo X - Categorias (barras diferentes)
+  - Eixo Y - Contagem (altura das barras) - **aqui o seaborn criou uma variável numérica para nós!**
+
+
+</div>
+<div>
+<br>
+
+![w:600](../aula2/count_forma_pagamento.png)
+
+</div>
+</div>
+
+---
+
+<div class="columns">
+<div>
+
+## Revisão
+
+- Gráficos são "representações geométricas dos dados"
+- Qual atributo dos dados esta sendo representado?
+  - Eixo X - Categorias (barras diferentes)
+  - Eixo Y - Contagem (altura das barras) - **aqui o seaborn criou uma variável numérica para nós!**
+
+
+</div>
+<div>
+<br>
+
+![w:600](../aula2/count_forma_pagamento.png)
+
+</div>
+</div>
+
+---
+
+![bg](section_bg.png)
+
+<div style="text-align: center">
+
+# Mas e se quisermos representar algo além de uma contagem?
+
+</div>
+
+---
+
+## Gráficos de barras
+
+- Barras representam em um eixo uma variável categórica e no outro uma variável numérica
+- O countplot cria um gráfico de barra limitado a uma "função de agregação" (contagem)
+- Para outras funções de agregação, usamos o `barplot`: e.g. soma e média -->
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
