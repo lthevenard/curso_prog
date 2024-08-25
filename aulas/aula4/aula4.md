@@ -119,17 +119,154 @@ td.player1 {
 
 ![bg](section_bg.png)
 
-# Título 
-**Contexto – ano.sem**
-Lucas Thevenard
+# Histplot: Conhecendo o formato de uma distribuição de valores 
+**Programação para Advogados – 2024.2**
+José Luiz Nunes e Lucas Thevenard
 
 ---
 <!-- 
 paginate: true 
-header: Título
-footer: lucas.gomes@fgv.br | DD/MM/AAAA
+header: Histplot: Conhecendo o formato de uma distribuição de valores 
+footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 19/08/2024
 -->
 
-## Meu slide
-- item 1
-- item 2
+## Roteiro da Aula
+- O que é um histograma?
+* Base de dados: IDH
+* Criando o histograma no Python
+  - Função `histplot()`
+  - Formato de distribuições
+* Mudando textos do gráfico
+
+---
+
+<div class="columns">
+
+<div>
+
+## O que é um histograma?
+
+- A tabela ao lado mostra a altura de 15 alunos. Como podemos representar graficamente os intervalos de valor mais representativos?
+* Vamos contar o número de alunos que aparecem em cada faixa de valor.
+
+</div>
+
+<div style="margin:auto 0 auto auto">
+
+![width:300](altura_dos_alunos.png)
+
+</div>
+
+
+</div>
+
+---
+
+<div class="columns">
+
+<div style="margin: auto">
+
+## O que é um histograma?
+
+![](alunos_7bins.png)
+
+</div>
+
+<div style="margin:auto 0 auto auto">
+
+![width:300](altura_dos_alunos_7bins.png)
+
+</div>
+
+</div>
+
+---
+
+<div class="columns">
+
+<div style="margin: auto">
+
+## O que é um histograma?
+
+![](alunos_4bins.png)
+
+</div>
+
+<div style="margin:auto 0 auto auto">
+
+![width:300](altura_dos_alunos_4bins.png)
+
+</div>
+
+</div>
+
+---
+
+<div class="columns">
+
+<div style="margin: auto">
+
+## O que é um histograma?
+
+<br>
+
+- E se dividíssemos os alunos em 30 intervalos diferentes de altura?
+- O que você acha que aconteceria com o gráfico nesse caso?
+
+<br>
+
+</div>
+
+<div style="margin:auto 0 auto auto">
+
+![width:300](altura_dos_alunos.png)
+
+</div>
+
+</div>
+
+---
+
+<br>
+
+<div style="margin:auto">
+
+![w:700](alunos_30bins.png)
+
+</div>
+
+---
+
+### Alternativas ao histograma: density plot e ECDF
+
+<br>
+
+<div class="columns">
+
+<div style="margin:auto">
+
+![w:550](alunos_density.png)
+
+</div>
+
+<div style="margin:auto">
+
+![w:550](alunos_ecdf.png)
+
+</div>
+
+</div>
+
+---
+
+## Vamos aos dados de hoje: IDH
+
+- Hoje vamos trabalhar com uma base de dados nova, uma base que tem informações do Índice de Desenvolvimento Humano (IDH).
+* Antes vamos recordar um pouco da importância de trabalharmos com dados em formato **tidy**.
+  * **Tidy**: Observações nas linhas, variáveis nas colunas, unidade de análise fixa!
+  * Vamos ver como os dados do IDH foram disponibilizados:
+    - Excel: 
+    - CSV: 
+
+
+
