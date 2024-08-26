@@ -265,7 +265,7 @@ footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 19/08/2024
 * Antes vamos recordar um pouco da importância de trabalharmos com dados em formato **tidy**.
   * **Tidy**: Observações nas linhas, variáveis nas colunas, unidade de análise fixa!
   * Vamos ver como os dados do IDH foram disponibilizados:
-    - Dados em excel e microdados CSV no [site do IDH](https://hdr.undp.org/data-center/human-development-index#/indicies/HDI).
+    - Dados em [excel](https://lthevenard.github.io/curso_prog/assets/aulas/aula4/idh_1.xlsx) e [microdados em CSV](https://lthevenard.github.io/curso_prog/assets/aulas/aula4/idh_2.xlsx) no [site do IDH](https://hdr.undp.org/data-center/human-development-index#/indicies/HDI).
 
 ---
 
