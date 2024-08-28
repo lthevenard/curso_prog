@@ -227,6 +227,7 @@ Opção 2: Podemos usar um gráfico de linhas
 - Hoje vamos usar a função `lineplot` do Seaborn
 
 - Vamos voltar aos dados do IDH, mas abordar a poluição per capita dos diferentes países
+  * Essa variável é representada na coluna `extra_co2`
 
 
 
@@ -268,7 +269,36 @@ df.head()
 
 ---
 
+
+## Gráfico de linha
+
+<div class="codeimage">
+<div>
+
+<br>
+
+O que devemos escrever em nosso código?
+```python
+
+
+
+
+
+
+```
+
+</div>
+<div>
+
+<br>
+
+
+</div>
+</div>
+
+
 ---
+
 
 ## Gráfico de linha
 
@@ -293,8 +323,68 @@ sns.lineplot(
 
 <br>
 
-![](plots/dados/1.png)
+
 
 </div>
 </div>
+
+
+---
+
+
+## Gráfico de linha
+
+<div class="codeimage">
+<div>
+
+<br>
+
+O lineplot funciona de forma semelhante ao `barplot` 
+```python
+sns.lineplot(
+    x="ano",
+    y="extra_co2",
+    data=df,
+)
+```
+
+[Documentação lineplot](https://seaborn.pydata.org/generated/seaborn.lineplot.html)
+
+</div>
+<div>
+
+<br>
+
+![](linha1.png)
+
+</div>
+</div>
+
+---
+
+
+## Gráfico de linha
+
+
+O lineplot funciona de forma semelhante ao `barplot` 
+
+Podemos:
+
+- Remover a barra (sombra) de erro com `errorbar=None`
+- Alterar o estimador de média para soma com `estimator=sum`
+
+
+Vamos pular esses passos que já conhecemos e proceder direto para perguntas mais interessantes
+
+---
+
+## Gráfico de linha
+
+Que pergunta interessante poderíamos abordar do ponto de vista de tendência?
+
+1. Vomo a poluição per capita evoluiu ao longo dos anos para países de diferentes regiões diferentes?
+2. Qual a tendência de poluição per capita para países com diferentes níveis de IDH?
+
+---
+
 
