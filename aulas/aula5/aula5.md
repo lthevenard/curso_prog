@@ -4,8 +4,14 @@ backgroundImage: 'default_bg.png'
 math: mathjax
 ---
 <style>
+
+:root{
+  font-family: "Source Sans Pro", sans-serif;
+}
+
 section {
   background-image: url(default_bg.png);
+  font-family: "Source Sans Pro", sans-serif;
 }
 h1, h2, h3, strong {
   color: #003E7E;
@@ -41,7 +47,7 @@ footer {
 blockquote {
   background: #f9f9f9;
   font-style: italic;
-  font-family: Verdana;
+  font-family: Source Sans Pro;
   font-size: 80%;
   line-height: 170%;
   border-left: 10px solid #ccc;
@@ -75,67 +81,56 @@ th {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
+.codeimage {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 1rem;
+}
 span.under {
   text-decoration: underline;
 }
-td.game, tr.game {
-  background-color: white;
-  text-align: center;
-}
-tr.game.action.player1, td.game.action.player1 {
-  background-color: #f8f8f8;
-  color: #058ED0;
-  font-weight: bold;
-}
-tr.game.action.player2, td.game.action.player2 {
-  background-color: #f8f8f8;
-  color: #003E7E;
-  font-weight: bold;
-}
-span.payoff.player1 {
-  color: #058ED0;
-  font-weight: bold;
-}
-span.payoff.player2 {
-  color: #003E7E;
-  font-weight: bold;
-}
+
 span.fade {
   color: lightgray!important;
 }
-td.eliminated {
-  color: lightgray!important;
-  text-decoration: line-through!important;
+
+section > h2 {
+  flex: 0.2 0 auto;
+  padding: 0;
+  margin: 0;
+  order: -999999;
 }
-td.eliminated > span {
-  color: lightgray!important;
-  text-decoration: line-through!important;
+
+section:has(> h2)::before {
+  flex: 1 0 auto;
+  display: block;
+  content: '';
+  order: 999999;
 }
-td.player1 {
-  height: 80px;
-  width: 80px;
-}
+
 </style>
 
 ![bg](section_bg.png)
 
-# Título da Aula 
+# Gráficos de linha: linheplot e paleta de cores
+
 **Programação para Advogados – 2024.2**
 José Luiz Nunes e Lucas Thevenard
 
 ---
+
 <!-- 
 paginate: true 
-header: Título da Aula
-footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | DD/MM/AAAA
+header: Aula 5 - Gráficos de linha | Paleta de cores
+footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 02/09/2024
 -->
 
-## Meu slide
-- item 1
-- item 2
+## Roteiro da Aula
+- Revisão
+- Gráficos de linha
+- Paleta de cores e ordenando categorias
+
 
 ---
 
-## Meu slide 2
-- item 1
-- item 2
+## Gráficos de linha

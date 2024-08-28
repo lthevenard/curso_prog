@@ -131,12 +131,29 @@ header: Título da Aula
 footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | DD/MM/AAAA
 -->
 
-## Meu slide
-- item 1
-- item 2
+
+## Revisão
+
+- Argumentos no seaborn: tipos de variáveis e conteúdo
+  - `x` e `y`
+  - `data`
+  - `hue`
+  - `color`
+  - `palette`
+  - `hue_order`
+  - `errorbar`
+  - `estimator`
 
 ---
 
-## Meu slide 2
-- item 1
-- item 2
+## Revisão
+
+- Argumentos no seaborn: tipos de variáveis e conteúdo
+  - `x` e `y`: variáveis numéricas ou categóricas - `str`
+  - `data`: nosso conjunto de dados - `pd.DataFrame`
+  - `hue`: variável categórica - `str`
+  - `color`: cor única - `str`
+  - `palette`: nome de paleta ou conjunto de cores - `str`, `list`, ou `dict`
+  - `hue_order`: ordem das categorias - `list` de `str`
+  - `errorbar`:   controla barra de erro - `None` (**não vimos como alterar**)
+  - `estimator`: função para resumir dados - `str`; `"mean"`, `"sum"`, `"median"`
