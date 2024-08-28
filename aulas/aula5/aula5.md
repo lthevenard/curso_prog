@@ -126,11 +126,175 @@ footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 02/09/2024
 -->
 
 ## Roteiro da Aula
-- Revisão
 - Gráficos de linha
+
 - Paleta de cores e ordenando categorias
+
+- Atribuindo cor para categoria
 
 
 ---
 
-## Gráficos de linha
+## Tendência de uma variável numérica no tempo
+
+- Como podemos visualizar a evolução de uma variável numérica no tempo?
+
+- Queremos enfatizar a tendência/evolução
+
+---
+
+## Tendência de uma variável numérica no tempo
+
+Opção 1: vamos usar o já conhecido gráfico de barras
+
+<div style="margin: 0 auto">
+
+![w:600](deputadas_ano_bar.png)
+
+<div>
+
+---
+
+## Tendência de uma variável numérica no tempo
+
+Opção 2: Podemos usar um gráfico de linhas
+
+<div style="margin: 0 auto">
+
+![w:600](deputadas_ano_line.png)
+
+</div>
+
+---
+## Tendência de uma variável numérica no tempo
+
+
+<div class="columns">
+<div>
+
+- Qual melhor mostra a evolução?
+
+![w:600](deputadas_ano_bar.png)
+
+</div>
+<div>
+
+<br>
+
+![w:600](deputadas_ano_line.png)
+
+</div>
+</div>
+
+---
+
+## Podemos também fazer comparações
+
+
+<div style="margin: 0 auto">
+
+![w:600](percent_line.png)
+
+</div>
+
+---
+
+## Podemos também fazer comparações
+
+- Se queremos enfatizar início e fim poderíamos usar o `pointplot` apenas com o primeiro e último valor
+
+<div style="margin: 0 auto">
+
+![w:500 h:400](percent_point.png)
+
+</div>
+
+
+---
+
+![bg](section_bg.png)
+
+<div style="text-align: center">
+
+# Voltando aos dados: `sns.lineplot`
+
+</div>
+
+---
+
+## Gráfico de linha
+
+- Hoje vamos usar a função `lineplot` do Seaborn
+
+- Vamos voltar aos dados do IDH, mas abordar a poluição per capita dos diferentes países
+
+
+
+---
+
+## Vamos carregar os dados
+
+```python
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("https://bit.ly/idh_tidy")
+
+df.head()
+```
+
+**Atenção:** Estamos mudando o nome da variável que contém nossos dados. Hoje vamos chamar o conjunto de dados (dataframe) de `df`.
+
+1. Assim quando formos chamar as funções de plotagem, vamos usar `data=` ??
+
+---
+
+## Vamos carregar os dados
+
+```python
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("https://bit.ly/idh_tidy")
+
+df.head()
+```
+
+**Atenção:** Estamos mudando o nome da variável que contém nossos dados. Hoje vamos chamar o conjunto de dados (dataframe) de `df`.
+
+1. Assim quando formos chamar as funções de plotagem, vamos usar **`data=df`**
+
+---
+
+---
+
+## Gráfico de linha
+
+<div class="codeimage">
+<div>
+
+<br>
+
+O lineplot funciona de forma semelhante ao `barplot` 
+```python
+sns.lineplot(
+    x="ano",
+    y="extra_co2",
+    data=df,
+)
+```
+
+[Documentação lineplot](https://seaborn.pydata.org/generated/seaborn.lineplot.html)
+
+</div>
+<div>
+
+<br>
+
+![](plots/dados/1.png)
+
+</div>
+</div>
+
