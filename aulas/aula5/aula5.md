@@ -86,6 +86,12 @@ th {
   grid-template-columns: 35% 65%;
   gap: 1rem;
 }
+
+.codeimage2 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 1rem;
+}
 span.under {
   text-decoration: underline;
 }
@@ -380,11 +386,349 @@ Vamos pular esses passos que já conhecemos e proceder direto para perguntas mai
 
 ## Gráfico de linha
 
-Que pergunta interessante poderíamos abordar do ponto de vista de tendência?
+Que pergunta poderíamos abordar do ponto de vista de tendência?
 
-1. Vomo a poluição per capita evoluiu ao longo dos anos para países de diferentes regiões diferentes?
+1. Como a poluição per capita evoluiu ao longo dos anos para países de diferentes regiões diferentes?
 2. Qual a tendência de poluição per capita para países com diferentes níveis de IDH?
 
 ---
 
+## Gráfico de linha
 
+P1: Como a poluição per capita evoluiu ao longo dos anos para países de diferentes regiões diferentes?
+
+
+<div class="codeimage">
+<div>
+
+
+
+```python
+sns.lineplot(
+    x="ano",
+    y="extra_co2",
+    ??
+    ??
+    ??
+    ??
+    data=df,
+)
+```
+</div>
+<div>
+
+
+
+</div>
+</div>
+
+---
+
+## Gráfico de linha
+
+Evolução da poluição per capita por região:
+
+<div class="codeimage">
+<div>
+
+Código:
+
+```python
+sns.lineplot(
+    x="ano",
+    y="extra_co2",
+    hue="regiao",
+    errorbar=None,
+    data=df,
+)
+```
+</div>
+<div>
+
+![](linha2_regiao.png)
+
+</div>
+</div>
+
+---
+
+## Gráfico de linha
+
+P1: Qual a tendência de poluição per capita para países com diferentes níveis de IDH?
+
+
+<div class="codeimage">
+<div>
+
+
+
+```python
+
+
+
+
+
+
+
+```
+</div>
+<div>
+
+
+
+</div>
+</div>
+
+---
+
+## Gráfico de linha
+
+P1: Qual a tendência de poluição per capita para países com diferentes níveis de IDH?
+
+
+<div class="codeimage">
+<div>
+
+
+
+```python
+sns.lineplot(
+    x="ano",
+    y="extra_co2",
+    hue="grupo_idh",
+    errorbar=None,
+    data=df,
+)
+```
+</div>
+<div>
+
+![](linha3.png)
+
+</div>
+</div>
+
+---
+
+
+![bg](section_bg.png)
+
+### Agora vamos ajustar o gráfico
+
+---
+
+## Ajustes de gráfico
+
+1. Vamos mudar a **paleta** de cores com o argumento `palette`
+
+
+<div class="codeimage2">
+<div>
+
+
+```python
+sns.lineplot(
+    x="ano",
+    y="extra_co2",
+    hue="grupo_idh",
+    errorbar=None,
+    palette="Blues",
+    data=df,
+    ax=ax,
+)
+```
+</div>
+<div>
+
+![](linha4.png)
+
+</div>
+</div>
+
+---
+
+## Ajustes de gráfico
+
+Mas a ordem da categoria está estranha, não?
+
+<div style="margin: 0 auto">
+
+![](linha4.png)
+
+</div>
+
+---
+
+## Ajustes de gráfico
+
+2. Vamos ajustar a ordem das categorias com o argumento `hue_order`
+
+Para isso precisamos criar uma lista com o nome das categorias na ordem desejada.
+
+Para criar uma lista, usamos colchetes `[]` e separamos os elementos com vírgula. Como estamos lidando com texto, precisamos colocar cada categoria entre aspas `""`.
+
+
+<br>
+
+```python	
+ordem_grupos = ["Baixo", "Mediano", "Alto", "Muito Alto" ]
+```
+
+---
+
+## Ajustes de gráfico
+
+
+
+
+<div class="codeimage">
+<div>
+
+```python	
+ordem_grupos = [
+  "Baixo",
+  "Mediano",
+  "Alto",
+  "Muito Alto"
+]
+
+sns.lineplot(
+    x="ano",
+    y="extra_co2",
+    hue="grupo_idh",
+    hue_order=ordem_grupos,
+    errorbar=None,
+    palette="Blues",
+    data=df,
+    ax=ax,
+)
+```
+
+</div>
+<div>
+
+
+![](linha5.png)
+
+</div>
+
+---
+
+## Ajustes de gráfico
+
+2. Agora vamos definir as cores individuais que queremos usar 
+
+Novamente, vamos criar uma lista. A correspondência das cores com categorias vai seguir a ordem que as categorias aparecem no gráfico.
+
+```python
+lista_cores = ["forestgreen", "pink", "steelblue", "purple"]
+```
+
+
+---
+
+## Ajustes de gráfico
+
+<div class="codeimage">
+<div>
+
+```python	
+
+sns.lineplot(
+    x="ano",
+    y="extra_co2",
+    hue="grupo_idh",
+    hue_order=ordem_grupos,
+    errorbar=None,
+    palette=lista_cores,
+    data=df,
+    ax=ax,
+)
+```
+
+</div>
+<div>
+
+
+![](linha6.png)
+
+</div>
+
+---
+
+## Ajustes de gráfico
+
+Podemos estipular as cores diretamente para cada categoria também, mas precisamos criar um dicionário.
+
+O dicionário associa uma chave (categoria) a um valor (cor). Usamos chaves `{}` para criar, ligando cada chave ao valor com `:` e separando os pares com vírgula.
+
+```python
+cores_grupos = {
+  "Baixo": "lightblue",
+  "Mediano": "pink",
+  "Alto": "forestgreen",
+  "Muito Alto": "steelblue",
+}
+```
+
+
+---
+
+## Ajustes de gráfico
+
+<div class="codeimage">
+<div>
+
+```python	
+
+sns.lineplot(
+    x="ano",
+    y="extra_co2",
+    hue="grupo_idh",
+    # Podemos usar o hue_order ou não
+    # hue_order=ordem_grupos,
+    errorbar=None,
+    palette=cores_grupos,
+    data=df,
+    ax=ax,
+)
+```
+
+</div>
+<div>
+
+
+![](linha6.png)
+
+</div>
+
+---
+
+## Nosso gráfico final
+
+
+```python
+fig, ax = plt.subplots(figsize=(10, 6))
+
+# Escolha o gráfico que você preferiu da aula
+sns.lineplot(
+    x="ano",
+    y="extra_co2",
+    hue="grupo_idh",
+    palette=cores_grupos,
+    hue_order=ordem_grupos,
+    errorbar=None,
+    data=df,
+    ax=ax,
+)
+
+ax.set_title("Emissão anual por nível de IDH em 2022")
+ax.set_ylabel("Emissão de CO2 per capita (toneladas) média")
+ax.set_xlabel("")
+```
+
+---
+
+![bg](section_bg.png)
+
+### Mãos a obra!
