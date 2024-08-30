@@ -729,6 +729,25 @@ ax.set_xlabel("")
 
 ---
 
+## Um gráfico alternativo para enfatizar mudança total
+
+<div class="codeimage">
+<div>
+<br>
+
+- Deixar apenas primeiro e último ano
+- Usar `pointplot`
+
+</div>
+
+<div>
+
+![h:500](inicio_fim_ponto.png)
+
+</div>
+
+---
+
 ![bg](section_bg.png)
 
 ### Mãos a obra!
