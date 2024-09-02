@@ -7481,11 +7481,11 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Gr%C3%A1ficos-de-linha-e-passagem-do-tempo">Gráficos de linha e passagem do tempo<a class="anchor-link" href="#Gr%C3%A1ficos-de-linha-e-passagem-do-tempo">¶</a></h1><p>Nessa aula, vamos introduzir gráficos que lidem com a passagem do tempo. Vamos focar em gráficos de linha, que são comumente utilizados para representer a variação de determinada medida ao longo do tempo.</p>
-<h2 id="Introdu%C3%A7%C3%A3o">Introdução<a class="anchor-link" href="#Introdu%C3%A7%C3%A3o">¶</a></h2><p>Nas aulas anteriores vimos como griar gráficos de barra de tipos diferentes e com propósitos distintos. Um ponto comum desses gráficos é a necessidade de abordar uma variável como categoria, para representar barras diferentes.</p>
-<p>Nessa aula iremos ver como criar gráficos que nos auxiliem a entender como uma variável numérica se comporta ao longo do tempo. Para isso, precisamos ter alguma variável que represente o tempo, como uma data, ou mesmo ano ou meses representados numericamente.</p>
-<p>Nosso instrumento principal será o gráfico de linha, através da função <code>sns.lineplot()</code>. Essa função é muito similar a <code>sns.barplot()</code>, mas ao invés de barras, ela plota linhas que conectam nossas observações. Se checarmos a documentação, ela também permite muito mais alterações, mas não precisamos nos preocupar com isso agora.</p>
-<p>Um ponto importante quando lidamos com dados temporais é que há uma convenção muito estabelecidade de representar variáveis temporais no eixo X. Assim, ainda que não haja nenhum impedimento técnico a representar nossa variável temporal no eixo Y, ela seria muito pouco usual. É importante termos isso em mante ao criar nossos gráficos.</p>
+<h1 id="Lineplot:-Gr%C3%A1ficos-de-linha,-passagem-do-tempo-e-paletas-de-cor.">Lineplot: Gráficos de linha, passagem do tempo e paletas de cor.<a class="anchor-link" href="#Lineplot:-Gr%C3%A1ficos-de-linha,-passagem-do-tempo-e-paletas-de-cor.">¶</a></h1><p>Nessa aula, vamos introduzir gráficos que lidam com a passagem do tempo. Vamos focar em gráficos de linha, que são comumente utilizados para representar a variação de determinada medida ao longo do tempo.</p>
+<h2 id="Introdu%C3%A7%C3%A3o">Introdução<a class="anchor-link" href="#Introdu%C3%A7%C3%A3o">¶</a></h2><p>Nas aulas anteriores vimos como criar gráficos de barra de tipos diferentes e com propósitos distintos. Um ponto comum desses gráficos é a necessidade de abordar uma variável como categoria, para representar barras diferentes.</p>
+<p>Nessa aula veremos como criar gráficos que nos auxiliem a entender como uma variável numérica se comporta ao longo do tempo. Para isso, precisamos ter alguma variável que represente o tempo, como uma data, ou mesmo ano ou meses representados numericamente.</p>
+<p>Nosso instrumento principal será o gráfico de linha, através da função <code>sns.lineplot()</code>. Essa função é muito similar a <code>sns.barplot()</code>, mas ao invés de barras, ela plota linhas que conectam nossas observações. Se checarmos a documentação, ela também permite diversas alterações, mas não precisamos nos preocupar com isso agora.</p>
+<p>Um ponto importante quando lidamos com dados temporais é que há uma convenção muito estabelecida de representar variáveis temporais no eixo X. Assim, ainda que não haja nenhum impedimento técnico a representar nossa variável temporal no eixo Y, ela seria muito pouco usual. É importante termos isso em mante ao criar nossos gráficos.</p>
 <p>Vamos começar importando as biblotecas e carregandos os dados como de costume.</p>
 </div>
 </div>
@@ -7694,8 +7694,8 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Vamos continuar utilizando os dados referentes ao IDH, assim como na aula anterior. Para conferir a descrição de cada variável revisite o texto da aula anterior.</p>
-<p>Contudo, agora vamos usar a versão sem filtrar os dados apenas para 2022, assim temos um panorama histórico de cada país.</p>
+<p>Vamos continuar utilizando os dados referentes ao IDH, assim como na aula anterior. Para conferir a descrição de cada variável, revisite o texto da aula anterior.</p>
+<p>Contudo, agora vamos usar a versão completa da base, sem filtrar os dados apenas de 2022, pois assim teremos um panorama histórico de cada país.</p>
 <p>Além disso, chamamos nossos dados de um nome genérico, <code>df</code>. Isso é uma prática bem comum em usuários do pandas, e é uma abreviação de "DataFrame", que é o tipo de objeto que armazena nossos dados. Por outro lado, é um nome que não descreve o conteúdo dos dados.</p>
 <p>Na aula de hoje vamos usar as seguintes variáveis:</p>
 <ul>
@@ -7751,7 +7751,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Como nossa representação do ano já se assemelha a uma categoria, poderíamos representar a mesma informação por um gráfico de barras.</p>
-<p>Veja como o gráfico de linha já faz alguns ajustes mais apropriados para representar a passagem do tempo.</p>
+<p>A seguir, a título de ilustração, vamos representar as mesmas variáveis por meio de um gráfico de barras. Compare os dois gráficos e veja como o gráfico de linha já faz alguns ajustes mais apropriados para representar a passagem do tempo.</p>
 </div>
 </div>
 </div>
@@ -7798,13 +7798,13 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Vamos focar na parte técnica de início, deixando de lado a tendência observada nos dados.</p>
+<p>Vamos focar na parte técnica, de início, deixando de lado a tendência observada nos dados.</p>
 <p>Primeiro: o gráfico de linha não mostra todo valor representado no eixo X. No gráfico de barras essa informação é necessária para identificar a categoria de cada barra. Contudo, o gráfico de linha é uma representação contínua da passagem do tempo, assim podemos ocultar parte dos valores. A rigor, o gráfico de barras sequer garante que a ordem das barras seja a ordem temporal.</p>
-<p>Além disso, no gráfico de linhas o eixo Y não começa em zero, ao contrário do gráfico de barras. Nesse tipo de visualização essa prática é aceitável porque o gráfico de linhas tem como objetivo enfocar a variação da variável. Além disso, a posição da linha não cria uma associação tão forte com o valor como acontece com a altura da barra. Contudo, isso não seria apropriado em um gráfico de barras.</p>
+<p>Além disso, no gráfico de linhas o eixo Y não começa em zero, ao contrário do gráfico de barras. Nesse tipo de visualização, essa prática é aceitável porque o gráfico de linhas tem como objetivo enfocar a variação da variável. Além disso, a posição da linha não cria uma associação tão forte com o valor como acontece com a altura da barra. Contudo, isso não seria apropriado em um gráfico de barras.</p>
 <h2 id="Ajustando-nosso-lineplot">Ajustando nosso lineplot<a class="anchor-link" href="#Ajustando-nosso-lineplot">¶</a></h2><p>Como mencionado no início, o gráfico de linha tem funcionamento muito similar ao de barra. Assim como <code>sns.barplot()</code>, <code>sns.lineplot()</code> está criando uma barra de erro (no caso, uma sombra ao redor da linha) em torno da média, que é o estimador padrão. Isso ocorre porque cada ano tem várias observações.</p>
-<p>Poderíamos mudar esse comportamento com os argumentos <code>estimator</code> e <code>errorbar</code>, como fizemos anteriormente. Contudo, a média da emissão média per capita por país não parece revelar informações muito interessantes, além de sua queda nos anos recentes.</p>
+<p>Poderíamos mudar esse comportamento com os argumentos <code>estimator</code> e <code>errorbar</code>, como fizemos anteriormente. Contudo, a média da emissão per capita por país não parece revelar informações muito interessantes, além de sua queda nos anos recentes.</p>
 <p>Uma ideia interessante pode ser que países de regiões diferentes podem ter evoluído de forma diferente. Vamos testar isso introduzindo o argumento <code>hue="regiao"</code></p>
-<p>Como já estamos acostumados com fazer usar argumentos em nossos gráficos, vamos também remover a barra de erro.</p>
+<p>Como já estamos acostumados a fazer, vamos também remover a barra de erro.</p>
 </div>
 </div>
 </div>
@@ -7908,7 +7908,7 @@ a.anchor-link {
 <p>Podemos ver algumas partes do gráfico um pouco melhor. Mas o resultado continua não sendo muito bom. Vamos abordar como alterar a legenda mais adiante no curso.</p>
 <p>De todo modo, temos alguma ideia do que está acontecendo entre as diferentes regiões.</p>
 <p><strong>Desafio</strong>: Vamos deixar um exercício para praticar também a parte de comunicar nossos achados. Como podemos descrever o gráfico acima para um potencial interlocutor? Qual padrão podemos observar para as regiões com o passar do tempo?</p>
-<p>Vamos passar para uma nova pergunta, mudando o que utilizamos no <code>hue</code>: será que países com IDHs diferentes se comportaram de forma diferente em relação a emissão de CO2?</p>
+<p>Vamos passar para uma nova pergunta, mudando o que utilizamos no <code>hue</code>: será que países com IDHs diferentes se comportaram de forma diferente em relação à emissão de CO2?</p>
 <p>Vamos mudar o valor da <code>hue</code> para <code>grupo_idh</code>, e ver se países que atualmente tem IDHs mais altos ou mais baxos tiveram comportamentos diferentes ao longo do tempo.</p>
 </div>
 </div>
@@ -8059,7 +8059,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Como temos muitas observações do ano, para nosso problema usar marcadores não parece uma boa opção. Contudo, aprendemos aqui um novo recurso que pode fazer sentido em outras análises.</p>
-<p>Vamos voltar para as cores e o argumento <code>hue</code>. No capítulo 2, vimos rapidamente que podemos estabelecer uma paleta de cores com o argumento <code>palette</code>. Isso nos permite definir não apenas uma cor para todo o gráfico, mas um conjunto de cores a ser utilizado quando introduzimos o argumento <code>hue</code> para dif.=erenciar categorias.</p>
+<p>Vamos voltar para as cores e o argumento <code>hue</code>. No capítulo 2, vimos rapidamente que podemos estabelecer uma paleta de cores com o argumento <code>palette</code>. Isso nos permite definir não apenas uma cor para todo o gráfico, mas um conjunto de cores a ser utilizado quando introduzimos o argumento <code>hue</code> para diferenciar categorias.</p>
 <p>Vamos praticar isso agora, definindo uma paleta de cores para as regiões.</p>
 <h1 id="Paletas-de-cores---revisitando">Paletas de cores - revisitando<a class="anchor-link" href="#Paletas-de-cores---revisitando">¶</a></h1><p>Uma primeira opção é usar uma paleta de cores já definida pelo seaborn, assim como fazemos com cores. Esse <a href="https://www.practicalpythonfordatascience.com/ap_seaborn_palette">apêndice do curso "Practical Python for Data Science"</a> e <a href="https://r02b.github.io/seaborn_palettes/">esse site sobre paletes no seaborn</a> apresentam uma boa listagem de paletas já disponíveis.</p>
 <p>O seaborn também nos permitiria criar uma paleta a partir de cores específicas de vários modos. <a href="https://seaborn.pydata.org/tutorial/color_palettes.html">A página sobre paletas do seaborn</a> tem uma boa explicação sobre isso e alguns aspectos de cor. Contudo, nem sempre precisamos de tanta complexidade.</p>
@@ -8151,10 +8151,10 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Um ponto estranho que ficou destacado com essa paleta é que a ordem do Hue não segue que esperamos pelo sentido: Mediano é o último valor e ficou com uma cor mais escura que Muito Alto. Poderíamos arrumar essa ordem.</p>
+<p>Um ponto estranho que ficou destacado com essa paleta é que a ordem do Hue não segue a que esperamos pelo sentido: Mediano é o último valor e ficou com uma cor mais escura que Muito Alto. Poderíamos arrumar essa ordem.</p>
 <p>Outra coisa que podemos fazer é escolher exatamente quais cores queremos usar em nosso gráfico.</p>
 <p>Para fazer isso precisamos criar uma lista. Listas são um tipo de objeto em Python que armazena vários valores. Podemos criar uma lista de cores, e passar essa lista para o argumento <code>palette</code> ou <code>hue_order</code>.</p>
-<p>Criamos listas em Python usando colchetes <code>[]</code>, e separamos os valores com vírgulas. Esses valores podem ser de qualquer tipo, no nosso caso precisaremos de listas de texto (strings) que representem cores ou as categorias. Assim, cada elemento da lista estar entre aspas.</p>
+<p>Criamos listas em Python usando colchetes <code>[]</code>, e separamos os valores com vírgulas. Esses valores podem ser de qualquer tipo, no nosso caso precisaremos de listas de texto (strings) que representem cores ou as categorias. Assim, cada elemento da lista deve estar entre aspas.</p>
 <p>Vamos primeiro estabelecer a ordem que desejamos para o grupo de IDH. Vamos criar uma variável chamada <code>ordem_grupos</code> e passar ela para o argumento <code>hue_order</code>.</p>
 </div>
 </div>
@@ -8208,7 +8208,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Ao acertar a ordem também consertamos a intensidade da cor para a paleta que estavamos usando.</p>
+<p>Ao acertar a ordem também consertamos a intensidade da cor para a paleta que estávamos usando.</p>
 <p><strong>ATENÇÃO</strong>: Se você escrever o nome dos grupos de forma diferente de como estão nos dados, o seaborn não vai entender que você está se referindo a mesma categoria. A consequência é que essa categoria é <strong>excluída do gráfico.</strong> Isso é um erro comum, para checar como elas estão escritas uma opção é fazer o gráfico sem a ordem e ver exatamente como elas estão escritas e depois alterar a visualização.</p>
 <p>Podemos também criar uma paleta de cores personalizada. Vamos criar uma lista de cores e passar para o argumento <code>palette</code>.</p>
 </div>
@@ -8263,7 +8263,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Claro, poderíamos combinar as duas abordagens.</p>
-<p><strong>Aviso</strong>: O código abaixo depende que as duas células anteriores tenham sido executadas para carregar as variáveis <code>ordem_grupos</code> e <code>lista_cores</code>.</p>
+<p><strong>Aviso</strong>: O código abaixo requer que as duas células anteriores tenham sido executadas para carregar as variáveis <code>ordem_grupos</code> e <code>lista_cores</code>.</p>
 </div>
 </div>
 </div>
@@ -8427,7 +8427,7 @@ a.anchor-link {
     <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Emissão anual de CO2 per capita por nível de IDH em 2022"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Emissão anual de CO2 per capita por nível de IDH ao longo dos anos"</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Emissão de CO2 per capita (toneladas) média"</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span> <span class="c1"># vamos deixar o eixo X sem rótulo, já que o título já explica</span>
@@ -8647,7 +8647,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Conclus%C3%A3o">Conclusão<a class="anchor-link" href="#Conclus%C3%A3o">¶</a></h2><p>Nessa aula vimos como usar lineplots para apresentar dados que enfatizam a passagem do tempo.</p>
-<p>Vimos em detalhe como controlar as cores de nosso gráfico quando queremos diferenciá-las por uma variável categórica, e também como estabelecer ordem para essa variável.</p>
+<p>Vimos em detalhe como controlar as cores de nosso gráfico quando queremos diferenciá-las por uma variável categórica, e também como estabelecer uma ordem para essa variável.</p>
 <p>Parabéns, se você chegou até aqui já pode ter um grande controle sobre o estilo de seus gráficos. Além disso, no caminho aprendemos um pouco sobre listas e dicionários, que são estruturas de dados muito importantes em Python.</p>
 </div>
 </div>
