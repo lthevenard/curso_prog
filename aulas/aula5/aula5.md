@@ -548,7 +548,6 @@ sns.lineplot(
     errorbar=None,
     palette="Blues",
     data=df,
-    ax=ax,
 )
 ```
 </div>
@@ -614,7 +613,6 @@ sns.lineplot(
     errorbar=None,
     palette="Blues",
     data=df,
-    ax=ax,
 )
 ```
 
@@ -656,7 +654,6 @@ sns.lineplot(
     errorbar=None,
     palette=lista_cores,
     data=df,
-    ax=ax,
 )
 ```
 
@@ -704,7 +701,6 @@ sns.lineplot(
     errorbar=None,
     palette=cores_grupos,
     data=df,
-    ax=ax,
 )
 ```
 
