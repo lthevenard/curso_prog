@@ -393,6 +393,8 @@ Que pergunta poderíamos abordar do ponto de vista de tendência?
 
 ---
 
+
+<!-- 
 ## Gráfico de linha
 
 P1: Como a poluição per capita evoluiu ao longo dos anos para países de diferentes regiões diferentes?
@@ -422,9 +424,9 @@ sns.lineplot(
 </div>
 </div>
 
----
+--- -->
 
-## Gráfico de linha
+<!-- ## Gráfico de linha
 
 Evolução da poluição per capita por região:
 
@@ -450,11 +452,22 @@ sns.lineplot(
 </div>
 </div>
 
+--- -->
+
+## Gráfico de linha
+
+Que pergunta poderíamos abordar do ponto de vista de tendência?
+
+1. Como a poluição per capita evoluiu ao longo dos anos para países de diferentes regiões diferentes?
+2. **Qual a tendência de poluição per capita para países com diferentes níveis de IDH?**
+
+
+
 ---
 
 ## Gráfico de linha
 
-P1: Qual a tendência de poluição per capita para países com diferentes níveis de IDH?
+Qual a tendência de poluição per capita para países com diferentes níveis de IDH?
 
 
 <div class="codeimage">
@@ -463,13 +476,14 @@ P1: Qual a tendência de poluição per capita para países com diferentes níve
 
 
 ```python
-
-
-
-
-
-
-
+sns.lineplot(
+    x="ano",
+    y="extra_co2",
+    ??
+    ??
+    ??
+    ??
+    data=df,
 ```
 </div>
 <div>
@@ -726,6 +740,25 @@ ax.set_title("Emissão anual por nível de IDH em 2022")
 ax.set_ylabel("Emissão de CO2 per capita (toneladas) média")
 ax.set_xlabel("")
 ```
+
+---
+
+## Um gráfico alternativo para enfatizar mudança total
+
+<div class="codeimage">
+<div>
+<br>
+
+- Deixar apenas primeiro e último ano
+- Usar `pointplot`
+
+</div>
+
+<div>
+
+![h:500](inicio_fim_ponto.png)
+
+</div>
 
 ---
 
