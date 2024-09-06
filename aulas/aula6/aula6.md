@@ -120,40 +120,85 @@ td.player1 {
 
 ![bg](section_bg.png)
 
-# Título da Aula 
+# Explorando distribuições – KDE, ECDF e Boxplot
 **Programação para Advogados – 2024.2**
 José Luiz Nunes e Lucas Thevenard
 
 ---
 <!-- 
 paginate: true 
-header: Título da Aula
-footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | DD/MM/AAAA
+header: Explorando distribuições – KDE, ECDF e Boxplot
+footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 09/09/1986
 -->
 
 
-## Revisão
+## O que aprendemos até aqui?
 
-- Argumentos no seaborn: tipos de variáveis e conteúdo
-  - `x` e `y`
-  - `data`
-  - `hue`
-  - `color`
-  - `palette`
-  - `hue_order`
-  - `errorbar`
-  - `estimator`
+- **Argumentos no seaborn**
+  * `x` e `y`
+  * `data`
+  * `hue`
+  * `color`
+  * `palette`
+  * `hue_order`
+  * `errorbar`
+  * `estimator`
 
 ---
 
-## Revisão
+## O que aprendemos até aqui?
 
-- Argumentos no seaborn: tipos de variáveis e conteúdo
-  - `x` e `y`: variáveis numéricas ou categóricas - `str`
-  - `data`: nosso conjunto de dados - `pd.DataFrame`
-  - `hue`: variável categórica - `str`
-  - `color`: cor única - `str`
-  - `palette`: nome de paleta ou conjunto de cores - `str`, `list`, ou `dict`
-  - `hue_order`: ordem das categorias - `list` de `str`
-  - `errorbar`:   controla barra de erro - `None` (**não vimos como alterar**)
-  - `estimator`: função para resumir dados - `str`; `"mean"`, `"sum"`, `"median"`
+- **O que passamos para os argumentos?**
+  * `x` e `y`:
+    * variáveis numéricas ou categóricas - `str`
+  * `data`:
+    * nosso conjunto de dados - `pd.DataFrame`
+  * `hue`:
+    * variável categórica - `str`
+  * `color`:
+    * cor única - `str`
+
+---
+
+## O que aprendemos até aqui?
+
+- **O que passamos para os argumentos?**
+  * `palette`:
+    * nome de paleta ou conjunto de cores - `str`, `list`, ou `dict`
+  * `hue_order`:
+    * ordem das categorias - `list` de `str`
+  * `errorbar`:
+    * controla barra de erro - `None` (**não vimos como alterar**)
+  * `estimator`:
+    * função para resumir dados - `str`; `"mean"`, `"sum"`, `"median"`
+
+---
+
+## Roteiro de Aula
+
+- Gráficos KDE e ECDF
+- Quartis e intervalo interquartil
+- Boxplot
+
+---
+
+
+
+---
+
+<div class="columns">
+<div style="margin: auto;">
+
+## KDE (Kernel Density Estimate)
+
+- Como podemos criar um gráfico para compreender a distribuição dos valores do IDH dos países em 2022 (coluna `"idh"` da nossa base) usando a função `kdeplot`?
+  * Você consegue ver algum problema nesse gráfico?
+
+</div>
+<div style="margin: auto;">
+<br><br>
+
+![w:700](kde_idh.png)
+
+</div>
+</div>
