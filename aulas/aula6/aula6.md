@@ -179,10 +179,36 @@ footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 09/09/1986
 - Gráficos KDE e ECDF
 - Quartis e intervalo interquartil
 - Boxplot
+- Query
 
 ---
 
+### Passos Preliminares
 
+<div style="margin: auto;">
+
+![w:700](passos_preliminares.png)
+
+</div>
+
+---
+
+<div class="columns">
+<div style="margin: auto;">
+
+## KDE (Kernel Density Estimate)
+
+- Como podemos criar um gráfico para compreender a distribuição dos valores do IDH dos países em 2022 (coluna `"idh"` da nossa base) usando a função `kdeplot`?
+
+<br><br>
+</div>
+<div style="margin: auto;">
+<br><br>
+
+
+
+</div>
+</div>
 
 ---
 
@@ -202,3 +228,190 @@ footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 09/09/1986
 
 </div>
 </div>
+
+---
+
+<div class="columns">
+<div style="margin: auto;">
+<br><br>
+
+![w:500](hist_idh.png)
+
+
+</div>
+<div style="margin: auto;">
+<br><br>
+
+![w:520](kde_idh.png)
+
+</div>
+</div>
+
+---
+
+<div class="columns">
+<div style="margin: auto;">
+
+## ECDF (Empirical Cum. Dist. Function)
+
+- Como podemos criar um gráfico para compreender a distribuição dos valores do IDH dos países em 2022 (coluna `"idh"` da nossa base) usando a função `ecdfplot`?
+
+<br><br>
+</div>
+<div style="margin: auto;">
+<br><br>
+
+
+
+</div>
+</div>
+
+---
+
+<div class="columns">
+<div style="margin: auto;">
+
+## ECDF (Empirical Cum. Dist. Function)
+
+- Como podemos criar um gráfico para compreender a distribuição dos valores do IDH dos países em 2022 (coluna `"idh"` da nossa base) usando a função `ecdfplot`?
+  * Como interpretamos esse gráfico e quais são as suas limitações?
+
+</div>
+<div style="margin: auto;">
+<br><br>
+
+![w:700](ecdf_idh.png)
+
+</div>
+</div>
+
+---
+
+<div style="margin: auto;">
+
+![w:900](ecdf.001.png)
+
+</div>
+
+---
+
+<div style="margin: auto;">
+
+![w:900](ecdf.002.png)
+
+</div>
+
+
+---
+
+<div style="margin: auto;">
+
+![w:900](ecdf.003.png)
+
+</div>
+
+---
+
+<div style="margin: auto;">
+
+![w:900](ecdf.004.png)
+
+</div>
+
+---
+
+<div style="margin: auto;">
+
+![w:900](ecdf.005.png)
+
+</div>
+
+---
+
+<div style="margin: auto;">
+
+![w:900](ecdf.001.png)
+
+</div>
+
+---
+
+## A divisão de uma distribuição em quartis
+
+- Vamos trabalhar com as idades de 12 pessoas.
+- `Idade`: 22, 24, 25, 28, 30, 35, 40, 42, 45, 50, 54, 60.
+* **Quartis como "partes" da distribuição de valores**:
+  * Agora vamos dividir essa distribuição em quatro partes:
+
+<br>
+<div class="columns" style="grid-template-columns: auto auto auto auto; gap: 5rem;">
+
+<div>
+
+* **1º Quartil**
+  -  22
+  -  24
+  -  25
+
+</div>
+<div>
+
+* **2º Quartil**
+  -  28
+  -  30
+  -  35
+
+</div>
+<div>
+
+* **3º Quartil**
+  -  40
+  -  42
+  -  45
+
+</div>
+<div>
+
+* **4º Quartil**
+  -  50
+  -  54
+  -  60
+
+</div>
+</div>
+
+---
+
+## A divisão de uma distribuição em quartis
+
+- `Idade`: 22, 24, 25, 28, 30, 35, 40, 42, 45, 50, 54, 60.
+* **Quartis como fronteiras entre as partes**:
+  * Por vezes usamos o termo "quartil" para designar as **3 fronteiras** entre as partes da nossa distribuição:
+    * **Q1**: divide o 1º quartil do 2º quartil. Ou seja, 25% dos casos estão abaixo desse valor.
+    * **Q2**: divide o 2º quartil do 3º quartil. Abaixo desse valor teríamos metade dos casos, ou seja, **Q2 é a mediana**.
+    * **Q3**: divide o 2º quartil do 3º quartil. Ou seja, 75% dos casos estão abaixo desse valor (e 25% estão acima).
+
+---
+
+## Intervalo Interquartil
+
+- O intervalo interquartil ($IQR$) é dado pela distância entre $Q1$ e $Q3$. Ou seja:
+
+<br>
+
+$$IQR = Q3 - Q1$$
+
+<br>
+
+- O $IQR$ é importante porque ele nos dá uma medida do grau de dispersão da nossa distribuição, tomando como base os casos "centrais", ou seja, os valores que estão em torno da nossa mediana.
+
+---
+
+<div style="margin: auto;">
+
+![w:900](ecdf.005.png)
+
+</div>
+
+---
+
