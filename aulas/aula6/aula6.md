@@ -415,3 +415,123 @@ $$IQR = Q3 - Q1$$
 
 ---
 
+<div class="columns">
+<div style="margin: auto;">
+
+## Boxplot
+
+- O gráfico boxplot oferece muitas informações sobre a distribuição, de forma condensada.
+- Ele é um gráfico extremamente informativo, desde que se saiba lê-lo.
+
+<br><br><br>
+</div>
+<div style="margin: auto;">
+<br><br>
+
+
+
+</div>
+</div>
+
+---
+
+<div class="columns">
+<div style="margin: auto;">
+
+## Boxplot
+
+- O gráfico boxplot oferece muitas informações sobre a distribuição, de forma condensada.
+- Ele é um gráfico extremamente informativo, desde que se saiba lê-lo.
+- A figura ao lado indica os significados associados a cada dimensão da caixa de um Boxplot.
+
+</div>
+<div style="margin: auto;">
+<br><br>
+
+![w:700](boxplot.001.png)
+
+</div>
+</div>
+
+---
+
+<div class="columns">
+<div style="margin: auto;">
+
+## Boxplot
+
+- Como podemos criar um gráfico para compreender a distribuição dos valores do IDH dos países em 2022 (coluna `"idh"` da nossa base) usando a função `boxplot`?
+
+<br><br>
+</div>
+<div style="margin: auto;">
+<br><br>
+
+
+
+</div>
+</div>
+
+---
+
+<div class="columns">
+<div style="margin: auto;">
+
+## Boxplot
+
+- Como podemos criar um gráfico para compreender a distribuição dos valores do IDH dos países em 2022 (coluna `"idh"` da nossa base) usando a função `boxplot`?
+
+<br><br>
+</div>
+<div style="margin: auto;">
+<br>
+
+![w:550](boxplot_idh.png)
+
+</div>
+</div>
+
+---
+
+<div class="columns">
+<div style="margin: auto;">
+<br><br>
+
+![w:500](hist_idh.png)
+
+
+</div>
+<div style="margin: auto;">
+<br><br>
+
+![w:480](boxplot_idh.png)
+
+</div>
+</div>
+
+---
+
+### O boxplot é muito útil para comparar distribuições!
+
+<div style="margin: auto;">
+
+
+![w:800](box_comp.png)
+
+</div>
+
+---
+
+#### **Filtrando dados com o método `.query()`**
+
+
+<div style="margin: auto;">
+
+
+![w:800](query.png)
+
+</div>
+
+---
+
+### Mãos à obra!
