@@ -144,6 +144,24 @@ footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 16/09/2024
 
 ---
 
+## Vamos carregar os dados
+
+```python
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+idh = pd.read_csv("https://bit.ly/idh_tidy")
+
+idh.head()
+```
+
+Estamos voltando para o dataset de IDH que contém a série histórica dos países.
+
+**Atenção**: Chamamos nosso dataset de `idh`.
+
+---
+
 ## Pointplot
 
 - Em aulas anteriores, vimos como criar gráficos de linha com o `lineplot`.
@@ -156,5 +174,177 @@ footer: jose.luiz@fgv.br | lucas.gomes@fgv.br | 16/09/2024
 
 ## Pointplot
 
-Qual o passo a passo necessário para griar esse gráfico?
+Qual o passo a passo necessário para criar esse gráfico com a função `pointplot`?
 
+<div class="codeimage">
+
+<div>
+
+
+</div>
+
+<div>
+
+![](point_inicio_fim.png)
+
+</div>
+
+</div>
+
+---
+
+## Pointplot
+
+Qual o passo a passo necessário para criar esse gráfico?
+
+<div class="codeimage">
+
+<div>
+
+1. Selecionar os **pontos específicos** que queremos destacar.
+
+</div>
+
+<div>
+
+![](point_inicio_fim.png)
+
+</div>
+
+</div>
+
+---
+
+## Pointplot
+
+Qual o passo a passo necessário para criar esse gráfico?
+
+<div class="codeimage">
+
+<div>
+
+1. Selecionar os **pontos específicos** que queremos destacar.
+  a) Selecionar Países
+  b) Selecionar Anos
+
+</div>
+
+<div>
+
+![](point_inicio_fim.png)
+
+</div>
+
+</div>
+
+---
+
+## Pointplot
+
+Qual o passo a passo necessário para criar esse gráfico?
+
+<div class="codeimage">
+
+<div>
+
+1. Selecionar os **observações** para manter.
+  a) Selecionar Países
+  b) Selecionar Anos
+2. Definir **paleta** de cores
+
+</div>
+
+<div>
+
+![](point_inicio_fim.png)
+
+</div>
+
+</div>
+
+---
+
+## Pointplot
+
+Qual o passo a passo necessário para criar esse gráfico?
+
+<div class="codeimage">
+
+<div>
+
+1. Selecionar os **observações** para manter.
+  a) Selecionar Países
+  b) Selecionar Anos
+2. Definir **paleta** de cores
+3. Criar o **gráfico**
+
+</div>
+
+<div>
+
+![](point_inicio_fim.png)
+
+</div>
+
+</div>
+
+---
+
+
+## Pointplot
+
+**Começando**: para fazer a seleção precisamos da variável `ano` e `pais`.
+
+- Como proceder para fazer cada filtro?
+
+---
+
+
+## Pointplot
+
+**Começando**: para fazer a seleção precisamos da variável `ano` e `pais`.
+
+- Como proceder para fazer cada filtro?
+
+```python
+anos_interesse = [1990, 2022]
+
+idh_anos = idh.query("ano in @anos_interesse")
+```
+
+---
+
+
+## Pointplot
+
+**Começando**: para fazer a seleção precisamos da variável `ano` e `pais`.
+
+- Como proceder para fazer cada filtro?
+
+```python
+paises_interesse = ["Brasil", "Argentina", "China"]
+
+df_comp_paises = idh_anos.query("pais in @paises_interesse")
+```
+
+---
+
+## Pointplot
+
+Todo nosso processo:
+
+```python
+idh
+# Começamos com os dados carregados na variável `idh`
+
+anos_interesse = [1990, 2022]
+idh_anos = idh.query("ano in @anos_interesse")
+# criamos uma nova variável com os anos de interesse
+
+paises_interesse = ["Brasil", "Argentina", "China"]
+df_comp_paises = idh_anos.query("pais in @paises_interesse")
+# criamos uma terceira variável com os países de interesse
+# Usamos idh_anos par manter o filtro anterior
+```
+
+**Pergunta**: Se alterarmos a ordem dos filtros, o resultado será o mesmo?
