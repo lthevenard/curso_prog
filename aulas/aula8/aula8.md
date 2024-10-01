@@ -119,7 +119,7 @@ td.player1 {
 
 ![bg](section_bg.png)
 
-# Título da Aula 
+# Scatterplot
 **Programação para Advogados – 2024.2**
 José Luiz Nunes e Lucas Thevenard
 

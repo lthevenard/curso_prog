@@ -118,7 +118,7 @@ section:has(> h2)::before {
 
 ![bg](section_bg.png)
 
-# Gráficos de linha: linheplot e paleta de cores
+# Pointplot: selecionando pontos e mais distribuições
 
 **Programação para Advogados – 2024.2**
 José Luiz Nunes e Lucas Thevenard
